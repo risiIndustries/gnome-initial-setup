@@ -25,6 +25,11 @@ sources += [
     'gis-keyring.h'
 ]
 
+webkit_dep = dependency('webkit2gtk-4.1', required : false)
+if not webkit_dep.found()
+  webkit_dep = dependency('webkit2gtk-4.0')
+endif
+
 dependencies = [
     dependency ('libnm', version: '>= 1.2'),
     dependency ('libnma', version: '>= 1.0'),
@@ -49,7 +54,7 @@ dependencies = [
     dependency ('krb5'),
     dependency ('libsecret-1', version: '>= 0.18.8'),
     dependency ('pwquality'),
-    dependency ('webkit2gtk-4.0', version: '>= 2.26.0'),
+    webkit_dep,
     cheese_dep,
     cheese_gtk_dep,
     ibus_dep,

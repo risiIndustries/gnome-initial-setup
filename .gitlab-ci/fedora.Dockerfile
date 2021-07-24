@@ -36,7 +36,7 @@ RUN dnf -y install --enablerepo=updates-testing \
     "pkgconfig(libnm)" \
     "pkgconfig(libnma)" \
     "pkgconfig(malcontent-ui-0)" \
-    "pkgconfig(webkit2gtk-4.0)" \
+    "pkgconfig(webkit2gtk-4.1)" \
     polkit-devel \
     rest-devel \
     && dnf clean all
