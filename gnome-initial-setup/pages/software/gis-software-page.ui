@@ -28,6 +28,7 @@
               <object class="GtkLabel">
                 <property name="visible">True</property>
                 <property name="halign">start</property>
+                <property name="active">True</property>
                 <property name="label" translatable="yes">Third-Party Repositories</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
