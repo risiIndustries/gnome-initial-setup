@@ -38,6 +38,7 @@
               <object class="GtkSwitch" id="proprietary_switch">
                 <property name="halign">end</property>
                 <property name="visible">True</property>
+                <property name="active">True</property>
                 <signal name="state-set" handler="state_set"/>
               </object>
             </child>
