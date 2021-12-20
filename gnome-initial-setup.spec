@@ -14,7 +14,7 @@ Summary:        Bootstrapping your OS
 License:        GPLv2+
 URL:            https://wiki.gnome.org/Design/OS/InitialSetup
 Source0:        https://github.com/risiOS/gnome-initial-setup/archive/refs/heads/gnome-41.tar.gz
-Source1:        vendor.conf
+Source1:        https://raw.githubusercontent.com/risiOS/gnome-initial-setup/gnome-41/vendor.conf
 
 BuildRequires:  meson
 BuildRequires:  gcc
@@ -66,7 +66,7 @@ a good setup experience to welcome you to your system, and walks
 you through configuring it. It is integrated with gdm.
 
 %prep
-%autosetup -p1 -n %{name}-%{tarball_version}
+%autosetup -p1 -n gnome-initial-setup-gnome-41
 
 %build
 %meson -Dparental_controls=disabled -Dvendor-conf-file=%{_datadir}/gnome-initial-setup/vendor.conf
